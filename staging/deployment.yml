@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: carrental
-        image: tiagomadeiradock/railscarrentalsapi:1.3
+        image: tiagomadeiradock/railscarrentalsapi:dd8e653
         imagePullPolicy: IfNotPresent
         resources:
           limits:
