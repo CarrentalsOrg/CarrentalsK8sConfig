@@ -6,7 +6,7 @@ metadata:
 spec:
     project: default
     source:
-        repoURL: https://github.com/TiagoMadeira/CarrentalsK8sConfig.git
+        repoURL: https://github.com/CarrentalsOrg/CarrentalsK8sConfig.git
         targetRevision: HEAD
         path: staging
         directory:
