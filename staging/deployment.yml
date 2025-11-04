@@ -14,6 +14,7 @@ spec:
       labels:
         app: carrental
     spec:
+      serviceAccountName: carrental
       containers:
       - name: carrental
         image: tiagomadeiradock/railscarrentalsapi:dd8e653
@@ -29,31 +30,21 @@ spec:
           - name: http
             containerPort: 3000
         env:
-        - name: RAILS_MASTER_KEY
-          valueFrom:
-            secretKeyRef:
-              name: carrental-secrets
-              key: rails-master-key
-        - name: DEVISE_JWT_SECRET_KEY 
-          valueFrom:
-            secretKeyRef:
-              name: carrental-secrets
-              key: devise-jwt-secret-key
-        - name: POSTGRES_USERNAME
-          valueFrom:
-            secretKeyRef:
-              name: postgres-credencials
-              key: user
-        - name: POSTGRES_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: postgres-credencials
-              key: password
-        - name: POSTGRES_URL
-          valueFrom:
-            configMapKeyRef:
-              name: carrental-configmap
-              key: database_url
+          - name: RAILS_MASTER_KEY
+            valueFrom:
+              secretKeyRef:
+                name: carrental-k8s-secret
+                key: k8s-rails-master-key
+          - name: DEVISE_JWT_SECRET_KEY 
+            valueFrom:
+              secretKeyRef:
+                name: carrental-k8s-secret
+                key: k8s-devise-jwt-secret-key
+          - name: POSTGRES_URL
+            valueFrom:
+             configMapKeyRef:
+                name: carrental-configmap
+                key: database_url
       imagePullSecrets:
       - name: regcred
 ---
