@@ -47,6 +47,13 @@ spec:
                 key: database_url
       imagePullSecrets:
       - name: regcred
+      volumes:
+        - name: secrets
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: carrental-aws-secrets           
 ---
 apiVersion: v1
 kind: Service
