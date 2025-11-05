@@ -7,6 +7,6 @@ parameters:
   type: gp3
 provisioner: kubernetes.io/aws-ebs
 reclaimPolicy: Delete
-volumeBlindMode: WaitForFirstConsumer
+volumeBindingMode: WaitForFirstConsumer
 allowVolumeExpansion: true
   
