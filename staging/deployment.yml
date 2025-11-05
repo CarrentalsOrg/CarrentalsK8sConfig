@@ -40,16 +40,6 @@ spec:
               mountPath: /mnt/secrets
               readOnly: true
         env:
-          - name: RAILS_MASTER_KEY
-            valueFrom:
-              secretKeyRef:
-                name: carrental-k8s-secret
-                key: k8s-rails-master-key
-          - name: DEVISE_JWT_SECRET_KEY 
-            valueFrom:
-              secretKeyRef:
-                name: carrental-k8s-secret
-                key: k8s-devise-jwt-secret-key
           - name: POSTGRES_URL
             valueFrom:
              configMapKeyRef:
