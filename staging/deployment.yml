@@ -50,6 +50,16 @@ spec:
               secretKeyRef:
                 name: carrental-k8s-secret
                 key: k8s-devise-jwt-secret-key
+          - name: POSTGRES_USERNAME 
+            valueFrom:
+              secretKeyRef:
+                name: carrental-db-k8s-secret
+                key: k8s-test-user
+          - name: POSTGRES_PASSWORD 
+            valueFrom:
+              secretKeyRef:
+                name: carrental-db-k8s-secret
+                key: k8s-test-pass
           - name: POSTGRES_URL
             valueFrom:
              configMapKeyRef:
