@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: carrental
 spec:
+  ingressClassName: external-nginx
   rules:
   - host: staging.carrentals.com
     http:
