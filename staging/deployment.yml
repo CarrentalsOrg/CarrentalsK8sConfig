@@ -13,6 +13,7 @@ spec:
       labels:
         app: carrental
     spec:
+      replicas: 2
       serviceAccountName: carrental-sa
       volumes:
         - name: secrets
