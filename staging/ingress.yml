@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: external-nginx
   rules:
-  - host: staging.carrentals.com
+  - host: k8s-ingress-external-c1290dec7a-968360f4e1f59017.elb.eu-west-3.amazonaws.com
     http:
       paths:
       - pathType: Prefix
