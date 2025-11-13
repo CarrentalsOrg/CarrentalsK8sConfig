@@ -3,10 +3,9 @@ kind: Ingress
 metadata:
   name: carrental
 spec:
-  ingressClassName: external-nginx
+  ingressClassName: internal-nginx
   rules:
-  - host: k8s-ingress-external-c1290dec7a-968360f4e1f59017.elb.eu-west-3.amazonaws.com
-    http:
+  - http:
       paths:
       - pathType: Prefix
         path: "/"
