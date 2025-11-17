@@ -4,4 +4,4 @@ metadata:
   name: carrental-configmap
 data:
   database_name: StagingCarrentalDb
-  database_host: terraform-20251114131810287800000001.ctsik20mstcl.eu-west-3.rds.amazonaws.com
+  database_host: terraform-20251117094302513400000004.ctsik20mstcl.eu-west-3.rds.amazonaws.com
