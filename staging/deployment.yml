@@ -14,7 +14,7 @@ spec:
         app: carrental
     spec:
       replicas: 2
-      serviceAccountName: carrental-sa
+      serviceAccountName: carrental-sa-podi
       volumes:
         - name: secrets
           csi:
