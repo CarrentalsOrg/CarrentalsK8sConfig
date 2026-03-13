@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: carrental
 spec:
-  ingressClassName: internal-nginx
+  ingressClassName: external-nginx
   rules:
   - http:
       paths:
