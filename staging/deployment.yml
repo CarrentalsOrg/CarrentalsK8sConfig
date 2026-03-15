@@ -23,7 +23,7 @@ spec:
               secretProviderClass: carrental-aws-secrets
       containers:
       - name: carrental
-        image: tiagomadeiradock/railscarrentalsapi:9ea52d9
+        image: tiagomadeiradock/railscarrentalsapi:refs-tags-1.8
         imagePullPolicy: IfNotPresent
         resources:
           limits:
